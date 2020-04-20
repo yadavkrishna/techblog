@@ -37,7 +37,7 @@ Please read [CONTRIBUTING.md](https://github.com/yadavkrishna/TechBlog/contribut
 
 ## Authors
 
-* **Billie Thompson** -](https://github.com/yadavkrishna)
+* **Krishna Kumar** -](https://github.com/yadavkrishna)
 
 See also the list of [contributors](https://github.com/yadavkrishna/TechBlog/contributors) who participated in this project.
 
