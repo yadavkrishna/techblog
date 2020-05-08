@@ -24,15 +24,7 @@ public class LikeServlet extends HttpServlet {
             String operation=request.getParameter("operation");
             int pid=Integer.parseInt(request.getParameter("pid"));
             int uid=Integer.parseInt(request.getParameter("uid"));
-<<<<<<< HEAD
-          
-=======
-            out.print("data from server\n");
-            out.print(operation+"\n");
-            out.print(pid+"\n");
-            out.print(uid+"\n");
->>>>>>> origin/master
-            
+           
             //calling modal for DB interaction
             LikeDao ld=new LikeDao(ConnectionProvider.getConnection());
             boolean f= ld.likeOnPost(pid, uid);
