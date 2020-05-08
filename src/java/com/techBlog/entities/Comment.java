@@ -1,5 +1,6 @@
 
 package com.techBlog.entities;
+
 //pojo class
 import java.sql.Timestamp;
 

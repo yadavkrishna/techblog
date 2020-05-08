@@ -1,5 +1,6 @@
 package com.techBlog.servlets;
 
+<<<<<<< HEAD
 import com.techBlog.dao.CommentDao;
 import com.techBlog.entities.Comment;
 import com.techBlog.entities.User;
@@ -63,6 +64,38 @@ public class CommentServlet extends HttpServlet {
             }
 
            
+=======
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ *
+ * @author krish
+ */
+public class CommentServlet extends HttpServlet {
+
+   
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        try {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet CommentServlet</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            String cmt=request.getParameter("cmt");
+            
+            out.println("</body>");
+            out.println("</html>");
+>>>>>>> origin/master
         } finally {
             out.close();
         }

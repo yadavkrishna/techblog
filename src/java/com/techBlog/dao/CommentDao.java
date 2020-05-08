@@ -1,6 +1,7 @@
 package com.techBlog.dao;
 
 import com.techBlog.entities.Comment;
+
 import com.techBlog.entities.Post;
 import java.sql.*;
 import java.util.ArrayList;

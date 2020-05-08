@@ -1,19 +1,20 @@
-function doComment(pid,uid){
-     console.log(pid+","+uid);
+function dolike(pid,uid){
+    
+    console.log(pid+","+uid);
     const d={
         uid: uid,
         pid: pid,
-        operation:'comment'
+        operation:'like'
     }
     $.ajax({
-        url:"CommentServlet",
+        url:"LikeServlet",
         data: d,
         success: function (data, textStatus, jqXHR) {
            console.log(data);
-            if(data.trim()=="done"){
-                let c=$(".cmtCounter").html();
+            if(data.trim()=="liked"){
+                let c=$(".likeCounter").html();
                 c++;
-                $(".cmtCounter").html(c);
+                $(".likeCounter").html(c);
             }
             
         },
@@ -27,3 +28,5 @@ function doComment(pid,uid){
     
     
 }
+
+
