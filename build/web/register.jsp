@@ -4,6 +4,7 @@
     Author     : krish
 --%>
 
+<%@page import="com.techBlog.entities.Message"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -35,6 +36,23 @@
                         <div class="card-header primary-background text-white text-center">
                             <h2><span class="fa fa-user"></span><br>Register</h2>
                         </div>
+                         <%
+                             Message m = (Message) session.getAttribute("msg");
+                             if (m != null) {
+                                    %>
+                                    
+                                    <div class="alert-<%=m.getType()%>" role="alert-<%=m.getCsstype()%>">
+                                        <%=m.getContent()%>
+                                    </div>
+                                    
+                                    <%
+                                            session.removeAttribute("msg");
+                                        }
+
+                            %>
+                                    
+                        
+                        
                         <div class="card-body">
                             <form id="reg-form"  action="UserServlet" method="Post">
                                     <div class="form-group">
@@ -54,13 +72,13 @@
                                         <label for="Usermobile">Mobile</label>
                                         <input type="number" required class="form-control" name="umobile">
                                     </div>
-                                    <div class="form-group">
+                                    <div class="form-group ">
                                         <label for="gender">Gender</label><br>
-                                        <input type="radio" name="gender" value="Male">Male
+                                        <input required type="radio" name="gender" value="Male">Male
                                         <input type="radio"  name="gender" value="Female">Female
                                     </div>
                                     <div class="form-group form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="tc">
+                                        <input required type="checkbox" class="form-check-input" id="exampleCheck1" name="tc">
                                         <label class="form-check-label" for="exampleCheck1">Agree terms & condtions</label>
                                     </div>
                                 <div class="container text-center" id="loader" style="display:none; ">
@@ -95,44 +113,44 @@
         
         <!--sweet alert js-->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <!--ajax-->
+            <!--ajax-->
         <script>
             $(document).ready(function (){
-                console.log("loaded...->..")
-                
-                $("#reg-form").on("submit",function(event){
-                  <!--event.preventDefault();-->
-                  event.PreventDefault(); 
-                  let form=new FormData(this);
-                  
-                
-                  $("#submit-btn").hide();
-                  $("#loader").show();
-                 
-                  
-                  //send data to register servlet
-                  
-                  $.ajax({
-                      url:"UserServlet",
-                      type:'Post',
-                      data:form,
-                      success: function (data, textStatus, jqXHR) {
-                       $("#submit-btn").show();
-                        $("#loader").hide(); 
-                          if(data.trim()==='done') { 
-                            swal("Registered successsfully! redirecting to login page ")
+                    console.log("loaded...->..")
+
+        $("#reg-fo rm").on("submit", function(event){
+<!--event.preventDefault();-->
+        event.PreventDefault(); 
+        let form=new FormData(this);
+        
+        
+        $("#submit-btn").hide();
+        $("#loader").show();
+        
+        
+        //send data to register servlet
+        
+        $.ajax({
+                    url:"UserServlet",
+                    type:'Post',
+                    data:form,
+                    success: function (data, textStatus, jqXHR) {
+                    $("#submit-btn").show();
+                            $("#loader").hide();
+                            if (data.trim() === 'done') {
+                    swal("Registered successsfully! redirecting to login page ")
                             .then((value) => {
-                            window.location="login.jsp";
-                            });
+                            window.location = "login.jsp";
+                        });
                         }else{
-                             swal(data);
-                        }
-                    },
-                      error: function (jqXHR, textStatus, errorThrown) {
-                       $("#submit-btn").show();
-                        $("#loader").hide(); 
-                        swal("something went wrong!.. ")
-                          
+                                    swal(data);
+                            }
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                                    $("#submit-btn").show();
+                                    $("#loader").hide();
+                                    swal("something went wrong!.. ")
+                       
                     },
                     processData: false,
                     contentType: false

@@ -6,6 +6,15 @@
 <%@page import="com.techBlog.helper.ConnectionProvider"%>
 <%@page import="com.techBlog.dao.PostDao"%>
 <%@page errorPage="ErrorPage.jsp" %>
+<style>
+    .text{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+</style>
 <div class="row">
     <%
        
@@ -14,16 +23,16 @@
         List<Post> posts =pd.getAllPost() ;
         for (Post allpost : posts) {
     %>
-    <div class="col md-4 offset-md-2">
+    <div class="col md-4 offset-md-2"><br>
         <div class="card">
-            <b class="text-center"><%=allpost.getPtitle()%></b>
+            <b class="text-center primary-background p-2 m-1"><%=allpost.getPtitle()%></b>
             <img src="Blog_pics/<%=allpost.getPpic()%>"  class="card-img-top" alt="...">
             <div class="card-body">
 
-                <p><%=allpost.getPprog()%></p>
+                <p class="text"><%=allpost.getPprog()%></p>
                 </div>
-                <div class="card-footer text-center primary-background">
-                    <a href="showPost.jsp?postid=<%=allpost.getPid()%>" class="btn btn-outline-light  ">Read More..</a>
+                <div class="card-footer text-center primary-background m-1">
+                    <a  href="showPost.jsp?postid=<%=allpost.getPid()%>" class="btn btn-outline-light ">Read More..</a>
                   </div>
 
         </div>

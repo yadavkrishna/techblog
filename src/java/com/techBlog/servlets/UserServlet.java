@@ -1,6 +1,7 @@
 package com.techBlog.servlets;
 
 import com.techBlog.dao.UserDao;
+import com.techBlog.entities.Message;
 import com.techBlog.entities.User;
 import com.techBlog.helper.ConnectionProvider;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @MultipartConfig
 public class UserServlet extends HttpServlet {
@@ -20,31 +22,39 @@ public class UserServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            String tc=request.getParameter("tc"); //check term&condt checked or not
-            if (tc==null) {
+            String tc = request.getParameter("tc"); //check term&condt checked or not
+            if (tc == null) {
                 out.println("Please select terms & Conditions");
-                
+                Message msg = new Message("Please fill all the required fields", "danger", "danger");
+                HttpSession session = request.getSession();
+                session.setAttribute("msg", msg);
+                response.sendRedirect("register.jsp");
+
             } else {
                 //fetch Data from view-form and send to -> Model &to ->(Db)
-                String name=request.getParameter("uname");
-                String email=request.getParameter("uemail");
-                String pass=request.getParameter("upass");
-                String mobile=request.getParameter("umobile");
-                String gender=request.getParameter("gender");
-                
+                String name = request.getParameter("uname");
+                String email = request.getParameter("uemail");
+                String pass = request.getParameter("upass");
+                String mobile = request.getParameter("umobile");
+                String gender = request.getParameter("gender");
+
                 //now pass data to entities  for set all data 
-               User ru=new User(name, email, pass, gender, mobile);
-                
-                
+                User ru = new User(name, email, pass, gender, mobile);
+
                 //now pass all userdao dattabase 
-                UserDao dao=new UserDao(ConnectionProvider.getConnection());
-                if (dao.saveUser(ru))
+                UserDao dao = new UserDao(ConnectionProvider.getConnection());
+                if (dao.saveUser(ru)) {
                     out.print("done");
-                RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
+                }
+                Message msg = new Message("Registration seccessful! Login here ", "success", "success");
+                HttpSession session = request.getSession();
+                session.setAttribute("msg", msg);
+
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                 rd.forward(request, response);
             }
         } catch (Exception se) {
-                    out.print("Error\n"+se);
+            out.print("Error\n" + se);
         } finally {
             out.close();
         }

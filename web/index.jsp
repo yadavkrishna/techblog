@@ -54,15 +54,17 @@
             <!--  //row for cards-->  
             <div class="row">
                 <div class="post container col-md-8 ">
-
+                   
                     <div class="container text-center" id="loader">
                         <i class="fa fa-refresh fa-4x fa-spin"></i>
                         <h3>Posts Loading...</h3>
                     </div>
+                    
                     <div class="container-fluid" id="LoadPost">
 
                     </div>
-
+              
+                </div>
                 </div>
 
 

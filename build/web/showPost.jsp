@@ -84,11 +84,8 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="home.jsp"> <span class="fa fa-bank"></span> Home <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><span class="fa fa-desktop"></span> Learn Code</a>
+                        <a class="nav-link" href="#"><span class="fa fa-desktop"></span>Report Post</a>
                     </li>
 
 
@@ -126,7 +123,7 @@
             </div>
         </nav>
         <!--main for show post-->
-        <main class="container">
+        <main class="container mt-5">
             <div class="row">
                 <div class="col-md-4 offset-md-4">
 
@@ -153,22 +150,22 @@
                             </div>
                             <div class="pcmt">
 
-                                <p><%=p.getPcontent()%></p>
+                                <p ><%=p.getPcontent()%></p>
 
                                 <p><%=p.getPprog()%> </p>
                             </div>
 
                         </div>
-                        <div class="container primary-background p-1">
+                        <div class="text-center container primary-background p-1">
                             <%
                                 LikeDao ld = new LikeDao(ConnectionProvider.getConnection());
                             %>
 
 
 
-                            <a href="#" onclick="dolike(<%=p.getPid()%>,<%=u.getId()%>)" class="btn btn-outline-light "><i class="fa fa-thumbs-o-up "><span class="likeCounter"><%=ld.getLikeByPostId(p.getPid())%></span> like</i></a>
-                            <a href="#"  class="btn btn-outline-light  " id="cbtn" ><i class="fa fa-comments"><span  class="cmtCounter"></span> </i>comment</a>
-                            <a href="#" class="btn btn-outline-light  "><i class="fa fa-send">share</i></a>
+                            <a  href="#" onclick="dolike(<%=p.getPid()%>,<%=u.getId()%>)" class="btn btn-outline-light m-1 "><i class="fa fa-thumbs-o-up "><span class="likeCounter"><%=ld.getLikeByPostId(p.getPid())%></span> like</i></a>
+                            <a href="#"  class="btn btn-outline-light m-1 " id="cbtn" ><i class="fa fa-comments "><span  class="cmtCounter"></span> </i>comment</a>
+                            <a href="#" class="btn btn-outline-light m-1  "><i class="fa fa-send">share</i></a>
 
 
 
