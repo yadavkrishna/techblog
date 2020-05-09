@@ -6,6 +6,16 @@
 <%@page import="com.techBlog.helper.ConnectionProvider"%>
 <%@page import="com.techBlog.dao.PostDao"%>
 <%@page errorPage="ErrorPage.jsp" %>
+<style>
+    .text{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+</style>
+
 <div class="row">
     <%
         User u=(User) session.getAttribute("CurrentUser");
@@ -30,8 +40,8 @@
             <div class="card-body">
 
                 
-                <p><%=allpost.getPcontent()%></p>
-                <p><%=allpost.getPprog()%><br></p>
+                <p class="text"><%=allpost.getPcontent()%></p>
+                <p class="text"><%=allpost.getPprog()%><br></p>
                 <p><a href=""><%=allpost.getPlink()%></a><br></p>
                 <p><%=allpost.getPuploaddate().toLocaleString()%></p><br>
                 

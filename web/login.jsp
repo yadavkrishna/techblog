@@ -29,7 +29,8 @@
                     <div class="col-md-4 offset-md-4">
                         <div class="card p-1">
                             <div class="card-header primary-background text-white text-center">
-                                <h2> <span class="fa fa-user plus"></span>  Login</h2>
+                                
+                                <h2><span class="fa fa-user plus fa-3x"></span> Login</h2>
                             </div>
                             
                             <%

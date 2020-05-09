@@ -6,11 +6,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-          <a class="nav-link" href="home.jsp"> <span class="fa fa-bank"></span> Home <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
-          <a class="nav-link" href="#"><span class="fa fa-desktop"></span> Learn Code</a>
+          <a class="nav-link" href="#"><span class="fa fa-desktop"></span>Latest Technology</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,7 +25,7 @@
       </li>
       <li class="nav-item">
           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true"> <span class="fa fa-paper-plane-o	
-                                                                                  "></span>Contact</a>
+                                                                                  "></span>Contact us</a>
       </li>
        <li class="nav-item">
           <a class="nav-link " href="login.jsp"> <span class="fa fa-user-circle-o	
