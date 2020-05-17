@@ -34,8 +34,8 @@
         for (Post allpost : posts) {
     %>
     <div class="col md-4 ">
-        <div class="card">
-            <b class="text-center"><%=allpost.getPtitle()%></b>
+        <div class="card my-2 p-1 ">
+            <b class="text-center primary-background "><%=allpost.getPtitle()%></b>
             <img src="Blog_pics/<%=allpost.getPpic()%>" class="card-img-top" alt="...">
             <div class="card-body">
 
@@ -51,7 +51,7 @@
                         LikeDao ld=new LikeDao(ConnectionProvider.getConnection());
                     %>
                     <a href="showPost.jsp?postid=<%=allpost.getPid()%>" class="btn btn-outline-light  ">Read More..</a>
-                    <a href="#" onclick="dolike(<%=allpost.getPid()%>,<%=u.getId() %>);" class="btn btn-outline-light  "><i class="fa fa-thumbs-o-up" class="likeCounter"><span > <%=ld.getLikeByPostId(allpost.getPid())%></span> likes</i></a>
+                    <a href="#" onclick="dolike(<%=allpost.getPid()%>,<%=u.getId() %>);" class="btn btn-outline-light  "><i class="fa fa-thumbs-o-up" class="likeCounter"><span > <%=ld.getLikeByPostId(allpost.getPid())%></span></i></a>
                     <a href="#" class="btn btn-outline-light  "><i class="fa fa-comments"></i></a>
                 </div>
 

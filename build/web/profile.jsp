@@ -45,7 +45,7 @@
     </head>
     <body>
         <!--navvar-->
-        <nav class="navbar navbar-expand-lg navbar-dark primary-background">
+        <nav class="navbar navbar-expand-lg navbar-dark primary-background fixed-top ">
             <a class="navbar-brand" href="index.jsp"><span class="fa fa-comments"></span>Tech Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -106,10 +106,10 @@
                 </ul>
 
             </div>
-        </nav>
+        </nav><br><br><br><br>
         <!--main body for post display -->
         <main>
-            <div class="container mt-5">
+            <div class="container">
 
                 <div class="row">
                     <div class="col-md-4">
@@ -255,14 +255,6 @@
                                     <tr>
                                         <td>Profile Picture:</td>
                                         <td><input type="file" class="form-control" name="newprofile" value="<%=u.getProfile()%>"></td>
-                                        <!-- <td>
-                                     <div class="container text-center">
-                                         <img src="Pics/"class="img-fluid" style="border-radius:20px; max-height: 200px; max-width:250px; "><br>
- 
-                                     </div>
-                                         </td>
-                                        -->
->>>>>>> origin/master
                                     </tr>
 
 

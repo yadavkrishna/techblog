@@ -60,10 +60,8 @@
                                         <input type="text" required class="form-control" id="usname" name="uname">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Email address</label>
-                                        <input type="text" required class="form-control" name="uemail" aria-describedby="emailHelp">
-                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                    </div>
+                                       <label for="exampleInputEmail1">Email address</label>
+                                        <input name="umail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" required class="form-control" name="upass">

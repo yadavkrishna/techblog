@@ -63,7 +63,8 @@
                                     </div>
                                   
                                     <div class="container text-center">
-                                        <button id="loginbtn" type="submit" class="btn btn-primary">Submit</button>
+                                        <button id="loginbtn" type="submit" class="btn btn-primary align-items-left">Login</button>
+                                        <a href="register.jsp" id="loginbtn" type="submit" class="btn btn-primary align-items-right">Create new Account</a>
                                     </div>
                                 </form>
                             </div>
