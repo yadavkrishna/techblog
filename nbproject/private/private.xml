@@ -7,11 +7,18 @@
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/loadpost.jsp</file>
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/profile.jsp</file>
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/src/java/com/techBlog/servlets/LoginServlet.java</file>
+<<<<<<< HEAD
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/showPost.jsp</file>
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/navbar.jsp</file>
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/index.jsp</file>
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/login.jsp</file>
             <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/register.jsp</file>
+=======
+            <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/index.jsp</file>
+            <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/login.jsp</file>
+            <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/web/register.jsp</file>
+            <file>file:/E:/Documents/New%20Folder%20(2)/TechBlog-0d90e2ced1cd1945099f122f6a4d57158d997a71/src/java/com/techBlog/servlets/UserServlet.java</file>
+>>>>>>> 7a576daca1215b70a514ddf5941f46a910ad0a48
         </group>
     </open-files>
 </project-private>
