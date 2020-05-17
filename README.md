@@ -1,6 +1,9 @@
 # TechBlog
 
-This is Java Web Application . In this user Do post and share infromation to others..
+This is Java Web Application .
+I made this project for my minor project submission in  college.
+I learn many things during making of project.
+In this user Do post and share infromation to others..
 
 ## Getting Started
 
@@ -16,11 +19,11 @@ basic knwoledge is required for understand project
 
 ```
 
-What things you need to install the software and how to install them
+What things you need to run this project 
 
 ```
-*NetBeans IDE 
-*MsqlWorkbench
+*NetBeans IDE / Eclipse 
+*MsqlWorkbench (or any other which you are familar with)
 
 ```
 
@@ -28,7 +31,7 @@ What things you need to install the software and how to install them
 ## Built With
 
 * [MVC Pattern]  used
-* [Dynamic web project] -Project Dependency Management
+* 
 
 
 ## Contributing
@@ -39,14 +42,3 @@ Please read [CONTRIBUTING.md](https://github.com/yadavkrishna/TechBlog/contribut
 
 * **Krishna Kumar** -](https://github.com/yadavkrishna)
 
-See also the list of [contributors](https://github.com/yadavkrishna/TechBlog/contributors) who participated in this project.
-
-## License
-
-This project is licensed under - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
