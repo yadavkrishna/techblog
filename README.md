@@ -38,7 +38,7 @@ What things you need to run this project
 
 Please read [CONTRIBUTING.md](https://github.com/yadavkrishna/TechBlog/contributors) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Authors
+## Author
 
 * **Krishna Kumar** -](https://github.com/yadavkrishna)
 
